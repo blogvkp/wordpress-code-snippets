@@ -1,6 +1,6 @@
 /** Add Custom Default Wordpress Avatar */
-add_filter( 'avatar_defaults', 'bourncreative_custom_gravatar' );
-function bourncreative_custom_gravatar ($avatar_defaults) {
+add_filter( 'avatar_defaults', 'blogvkp_custom_gravatar' );
+function blogvkp_custom_gravatar ($avatar_defaults) {
 $myavatar = get_bloginfo('template_directory') . '/images/custom-gravatar.jpg';
 $avatar_defaults[$myavatar] = "Custom Gravatar";
 return $avatar_defaults;
