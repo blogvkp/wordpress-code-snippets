@@ -29,3 +29,20 @@ function wpvkp_share_post($url, $title) {
 </section>
     <?php
 }
+
+
+/****************************
+Use this function inside your single.php or content.php or at any location to load the social button and pass the $arguments.
+$url with get_permalink() and $title with get_the_title().
+****************************/
+
+<?php vkp_share_post(get_permalink(), get_the_title()); ?>
+
+/****************************
+Implementation example
+****************************/
+
+	<footer class="entry-footer">
+		<?php vkp_share_post(get_permalink(), get_the_title()); ?>
+		<?php wpvkp_magazine_pro_theme_entry_footer(); ?>
+	</footer><!-- .entry-footer -->
